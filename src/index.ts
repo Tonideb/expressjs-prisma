@@ -1,6 +1,6 @@
 import { PrismaClient } from "@prisma/client";
 import express from "express";
-const cors = require('cors')
+const cors = require("cors");
 
 const prisma = new PrismaClient();
 const app = express();
@@ -71,6 +71,6 @@ app.get("/", (req, res) => {
   `);
 });
 
-app.listen(port, () => {
-  console.log(`Server running on http://localhost:${port}`);
+app.listen(Number(port), "0.0.0.0", () => {
+  console.log(`Example app listening at http://localhost:${port}`);
 });
